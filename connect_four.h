@@ -24,4 +24,6 @@ typedef struct s_game
 void	put_ball(int type);
 void	print_board(int	board[][6], int turn);
 int		kbhit(void);
-void	put_winner(int player);
+void	judge(t_game *game);
+void	focus_ball(t_game *game);
+void	drop_ball(t_game *game);
