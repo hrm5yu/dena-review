@@ -1,5 +1,20 @@
 #include "connect_four.h"
 
+int	connect_count(t_game *game, int x, int y, int flag)
+{
+	if (y < 0 || y > 6 || x < 0 || x > 5 || game->board[y][x] != game->turn)
+		return (0);
+	if (flag == DIAGONAL)
+		return (1 + connect_count(game, x + 1, y + 1, flag));
+	if (flag == R_DIAGONAL)
+		return (1 + connect_count(game, x + 1, y - 1, flag));
+	if (flag == HORIZON)
+		return (1 + connect_count(game, x + 1, y, flag));
+	if (flag == VERTICAL)
+		return (1 + connect_count(game, x, y + 1, flag));
+	return (0);
+}
+
 int	diagonal(t_game *game, int y)
 {
 	int x;

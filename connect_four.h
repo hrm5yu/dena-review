@@ -27,3 +27,4 @@ int		kbhit(void);
 void	judge(t_game *game);
 void	focus_ball(t_game *game);
 void	drop_ball(t_game *game);
+void	board_controller(int c, t_game *game);
