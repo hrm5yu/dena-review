@@ -1,7 +1,7 @@
 NAME = connect_four
 CC = GCC
 CFLAGS = -Wall -Wextra -Werror
-SRCS = print.c main.c kbhit.c judge.c control.c
+SRCS = print.c main.c judge.c control.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
